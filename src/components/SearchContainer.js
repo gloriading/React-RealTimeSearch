@@ -6,7 +6,7 @@ export default class SearchContainer extends Component {
 
   render(){
     return(
-      <div>
+      <div className="main-container">
         <Header />
         <List />
       </div>

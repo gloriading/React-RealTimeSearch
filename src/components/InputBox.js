@@ -7,7 +7,7 @@ export default class InputBox extends Component {
         <input
           className="input-box"
           type="text"
-          placeholder="enter to search" />
+          placeholder="type here to search" />
       </div>
     )
   }
