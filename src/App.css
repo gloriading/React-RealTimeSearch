@@ -43,4 +43,5 @@ h1.title {
 
 .list-container {
   flex: 3;
+  padding: 0px 50px;
 }

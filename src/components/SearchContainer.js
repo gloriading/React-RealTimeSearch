@@ -10,15 +10,14 @@ export default class SearchContainer extends Component {
   }
 
   handleChange(input){
-    this.setState({ searchInput: input });
+    this.setState({ searchInput: input.toLowerCase() });
   }
 
   render(){
     return(
       <div className="main-container">
         <Header onInputChange={this.handleChange}/>
-        <h3>{this.state.searchInput}</h3>
-        <List />
+        <List searchTerm={this.state.searchInput} />
       </div>
     )
   }
