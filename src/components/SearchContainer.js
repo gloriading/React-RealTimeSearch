@@ -18,6 +18,7 @@ export default class SearchContainer extends Component {
       <div className="main-container">
         <Header onInputChange={this.handleChange}/>
         <List searchTerm={this.state.searchInput} />
+        <p className="logo">&copy; <span className="pinkText">Glorious</span> Web Design</p>
       </div>
     )
   }

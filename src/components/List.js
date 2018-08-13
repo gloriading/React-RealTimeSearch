@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 export default class List extends Component {
   constructor(props){
@@ -27,8 +28,13 @@ export default class List extends Component {
       return person.name.toLowerCase().indexOf(this.props.searchTerm) !== -1
     })
 
-    list = filteredList.map( person => {
-      return <li key={person.id}>{person.name}</li> ;
+    list = filteredList.map( (person, index) => {
+      return (
+        <ListGroupItem
+          className="list-item"
+          key={index}>{person.name}
+        </ListGroupItem>
+      );
     })
 
     if(this.state.isLoad){
@@ -36,9 +42,9 @@ export default class List extends Component {
     }else{
       return(
         <div className="list-container">
-          <ul>
-          {list}
-          </ul>
+           <ListGroup>
+            {list}
+           </ListGroup>
         </div>
       );
     }
